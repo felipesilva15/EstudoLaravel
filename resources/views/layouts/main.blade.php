@@ -17,6 +17,29 @@
         <link rel="stylesheet" href="/css/style.css">
     </head>
     <body>
+        <header>
+            <nav class="navbar navbar-expand-lg navbar-light">
+                <div class="colapse navbar-collapse" id="navbar">
+                    <a href="/" class="navbar-brand">
+                        <img src="/img/felipeevents_logo.svg" alt="">
+                    </a>
+                    <ul class="navbar-nav">
+                        <li class="nav-item">
+                            <a href="/" class="nav-link">Eventos</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="/" class="nav-link">Criar eventos</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="/" class="nav-link">Login</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="/" class="nav-link">Cadastrar-se</a>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+        </header>
         <main>
             @yield('content')
         </main>
