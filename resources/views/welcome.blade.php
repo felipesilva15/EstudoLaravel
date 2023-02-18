@@ -4,16 +4,20 @@
 @section('content')
     <div id="search-container" class="col-md-12">
         <h1>Busque um evento</h1>
-        <form action="">
+        <form action="/" method="GET">
                 <input type="text" name="search" id="search" class="form-control" placeholder="Procurar...">
         </form>
     </div>
     <div id="events-container" class="col-md-12">
-        <h2>Próximos eventos</h2>
-        <p class="subtitle">Veja os eventos dos próximos dias</p>
+        @if ($search)
+            <h2>Buscando por {{ $search }}</h2>
+        @else
+            <h2>Próximos eventos</h2>
+            <p class="subtitle">Veja os eventos dos próximos dias</p>
+        @endif
         <div id="cards-container" class="row">
             @foreach ($events as $event)
-                <div class="card col-md-3">
+                <div class="card col-12 col-sm-6 col-md-3">
                     @if ($event->image)
                         <img src="/img/events/{{ $event->image }}" alt="{{ $event->title }}">
                     @else
@@ -28,7 +32,9 @@
                     </div>
                 </div>
             @endforeach
-            @if (count($events) == 0)
+            @if (count($events) == 0 && $search)
+                <p class="p-0">Não não foi possível encontrar nenhum evento com <span class="fw-bold">{{ $search }}</span>. <a href="/">Ver todos</a></p>
+            @elseif ((count($events) == 0))
                 <p class="p-0">Não há eventos disponíveis</p>
             @endif
         </div>

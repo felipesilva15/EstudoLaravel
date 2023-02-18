@@ -9,9 +9,17 @@ use App\Models\Event;
 class EventController extends Controller
 {
     public function index(){
-        $data = Event::all();
+        $search = request('search');
 
-        return view('welcome', ['events'=>$data]);
+        if($search){
+            $data = Event::where([
+                ['title', 'like', '%'.$search.'%']
+            ])->get();
+        } else{
+            $data = Event::all();
+        }
+
+        return view('welcome', ['events'=>$data, 'search'=>$search]);
     }
 
     public function create(){
