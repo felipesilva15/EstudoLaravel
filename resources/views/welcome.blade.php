@@ -2,36 +2,27 @@
 
 @section('title', "Felipe's events")
 @section('content')
-    <h1>Título</h1>
-    <img src="/img/banner.jpg">
-
-    @if(10 > 5)
-        <p>A condição do IF é true</p>
-    @endif
-
-    @if($nome == "Felipe")
-        <p>O nome é Felipe.</p>
-    @elseif($nome == "Felipe Silva")
-        <p>O nome é Felipe Silva e tem {{ $idade }} anos.</p>
-    @else
-        <p>O nome não é Felipe, é {{ $nome }}.</p>
-    @endif
-
-    <p>Valor da variavel $nome: {{ $nome }}</p>
-
-    @for ($i = 0; $i < count($array); $i++)
-        <p>{{ $i }} - {{ $array[$i] }}</p>
-    @endfor
-
-    @php
-        $nome = "Lucas";
-
-        echo $nome;
-    @endphp
-
-    @foreach ($nomes as $nome)
-        <p>{{ $loop->index }} - {{ $nome }}</p>
-    @endforeach
-
-    {{-- Este é um comentário do blade --}}
+    <div id="search-container" class="col-md-12">
+        <h1>Busque um evento</h1>
+        <form action="">
+                <input type="text" name="search" id="search" class="form-control" placeholder="Procurar...">
+        </form>
+    </div>
+    <div id="events-container" class="col-md-12">
+        <h2>Próximos eventos</h2>
+        <p class="subtitle">Veja os eventos dos próximos dias</p>
+        <div id="cards-container" class="row">
+            @foreach ($events as $event)
+                <div class="card col-md-3">
+                    <img src="/img/event_placeholder.jpg" alt="{{ $event->title }}">
+                    <div class="card-body">
+                        <div class="card-date">18/02/2023</div>
+                        <div class="card-title">{{ $event->title }}</div>
+                        <p class="card-participants">X participantes</p>
+                        <a href="#" class="btn btn-primary">Saber mais</a>
+                    </div>
+                </div>
+            @endforeach
+        </div>
+    </div>
 @endsection

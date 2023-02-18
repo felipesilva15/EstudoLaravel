@@ -16,7 +16,7 @@
     </head>
     <body>
         <header>
-            <nav class="navbar navbar-expand-lg navbar-light">
+            <nav class="navbar navbar-expand-lg navbar-light px-3">
                 <div class="colapse navbar-collapse" id="navbar">
                     <a href="/" class="navbar-brand">
                         <img src="/img/felipeevents_logo.svg" alt="">
@@ -26,7 +26,7 @@
                             <a href="/" class="nav-link">Eventos</a>
                         </li>
                         <li class="nav-item">
-                            <a href="/events/create" class="nav-link">Criar eventos</a>
+                            <a href="/events/create" class="nav-link">Criar evento</a>
                         </li>
                         <li class="nav-item">
                             <a href="/" class="nav-link">Login</a>
@@ -42,7 +42,7 @@
             @yield('content')
         </main>
         <footer>
-            <p style="text-align: center; font-weight: bold;">Felipe's Events &copy; 2023</p>
+            <p>Felipe's Events &copy; 2023</p>
         </footer>
 
         <!-- JS do bootstrap -->

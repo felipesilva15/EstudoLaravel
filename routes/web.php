@@ -20,9 +20,7 @@ use App\Http\Controllers\ProductController;
 // Eventos
 Route::get('/', [EventController::class, 'index']);
 Route::get('/events/create', [EventController::class, 'create']);
+Route::post('/events', [EventController::class, 'store']);
 
 // Contato
 Route::get('/contact', [ContactController::class, 'index']);
-
-// Produtos
-Route::get('/produtos', [ProductController::class, 'index']);
