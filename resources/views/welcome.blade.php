@@ -14,7 +14,12 @@
         <div id="cards-container" class="row">
             @foreach ($events as $event)
                 <div class="card col-md-3">
-                    <img src="/img/event_placeholder.jpg" alt="{{ $event->title }}">
+                    @if ($event->image)
+                        <img src="/img/events/{{ $event->image }}" alt="{{ $event->title }}">
+                    @else
+                        <img src="/img/event_placeholder.jpg" alt="{{ $event->title }}">
+                    @endif
+
                     <div class="card-body">
                         <div class="card-date">18/02/2023</div>
                         <div class="card-title">{{ $event->title }}</div>
