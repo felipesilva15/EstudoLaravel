@@ -135,6 +135,32 @@ header{
     color: #757575;
 }
 
+/* Event Page */
+
+#image-container img{
+    border-radius: 10px;
+}
+
+#info-container p{
+    display: flex;
+}
+
+#info-container .material-icons{
+    color: #F2A340;
+}
+
+#info-container h3{
+    font-size: 20px;
+}
+
+#items-list{
+    list-style: none;
+}
+
+#items-list li{
+    display: flex;
+}
+
 /* Footer */
 
 footer{

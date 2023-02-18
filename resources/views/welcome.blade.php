@@ -21,13 +21,16 @@
                     @endif
 
                     <div class="card-body">
-                        <div class="card-date">18/02/2023</div>
+                        <div class="card-date">{{ date('d/m/Y', strtotime($event->date))}}</div>
                         <div class="card-title">{{ $event->title }}</div>
                         <p class="card-participants">X participantes</p>
-                        <a href="#" class="btn btn-primary">Saber mais</a>
+                        <a href="/events/{{ $event->id }}" class="btn btn-primary">Saber mais</a>
                     </div>
                 </div>
             @endforeach
+            @if (count($events) == 0)
+                <p class="p-0">Não há eventos disponíveis</p>
+            @endif
         </div>
     </div>
 @endsection
