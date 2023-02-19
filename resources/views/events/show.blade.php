@@ -11,7 +11,7 @@
                 <h1>{{ $event->title }}</h1>
                 <p class="event-city m-0"><span class="material-icons pe-2">location_on</span> {{ $event->city }}</p>
                 <p class="events-participants m-0"><span class="material-icons pe-2">groups</span>  X Participantes</p>
-                <p class="event-owner m-0"><span class="material-icons pe-2">star</span> Dono do evento</p>
+                <p class="event-owner m-0"><span class="material-icons pe-2">star</span> {{ $eventOwner['name'] }}</p>
                 <a href="#" class="btn btn-primary mt-3" id="event-submit">Confirmar presença</a>
                 <h3 class="mt-3">O evento conta com</h3>
                 <ul id="items-list" class="ps-0">
