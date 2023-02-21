@@ -183,3 +183,10 @@ footer p{
 #event-create-container label{
     font-weight: bold;
 }
+
+/* Dashboard */
+
+.dashboard-events-container form{
+    display: inline-block;
+}
+
