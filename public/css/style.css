@@ -161,6 +161,13 @@ header{
     display: flex;
 }
 
+.already-joined-msg{
+    color: #004085;
+    background-color: #CCE5FF;
+    border: 1px solid #B8DAFF;
+    width: 275px;
+}
+
 /* Footer */
 
 footer{

@@ -45,7 +45,7 @@
                 </div>
             </div>
             <div class="form-group pb-3">
-                <input class="fw-bold" type="checkbox" name="private" id="private" class="pe-1">
+                <input class="fw-bold" type="checkbox" name="private" id="private" class="pe-1" value="1">
                 <label for="private">Evento privado</label>
             </div>
             <input type="submit" class="btn btn-primary" value="Criar evento">
